@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.lab3.SimpleController">
+    <HBox>
+        <Button onAction="#onFromTXTButtonClick" text="wczytaj dane z TXT!" />
+        <Button onAction="#onFromXMLButtonClick" text="wczytaj dane z XML!" />
+        <Button onAction="#onToTXTButtonClick" text="zapisz dane do TXT!" />
+        <Button onAction="#onToXMLButtonClick" text="zapisz dane do XML!" />
+        <Button onAction="#onFromDBButtonClick" text="wczytaj dane z Bazy Danych!!" />
+        <Button onAction="#onToDBButtonClick" text="zapisz dane do Bazy Danych!!" />
+    </HBox>
+
+    <TableView fx:id="table" onMouseClicked="#rowClicked">
+        <columns>
+            <TableColumn fx:id="manufacturerColumn" text="Producent">
+            </TableColumn>
+            <TableColumn fx:id="screenSizeColumn" text="Wielkość matrycy">
+            </TableColumn>
+            <TableColumn fx:id="screenResolutionColumn" text="Rozdzielczość">
+            </TableColumn>
+            <TableColumn fx:id="screenTypeColumn" text="Typ matrycy">
+            </TableColumn>
+            <TableColumn fx:id="touchScreenColumn" text="Czy dotykowy ekran">
+            </TableColumn>
+            <TableColumn fx:id="processorColumn" text="Procesor">
+            </TableColumn>
+            <TableColumn fx:id="physicalCoresColumn" text="Liczba rdzeni fizycznych">
+            </TableColumn>
+            <TableColumn fx:id="clockSpeedColumn" text="Taktowanie">
+            </TableColumn>
+            <TableColumn fx:id="ramColumn" text="RAM">
+            </TableColumn>
+            <TableColumn fx:id="discStorageColumn" text="Pojemność dysku">
+            </TableColumn>
+            <TableColumn fx:id="discTypeColumn" text="Typ dysku">
+            </TableColumn>
+            <TableColumn fx:id="graphicCardColumn" text="Karta graficzna">
+            </TableColumn>
+            <TableColumn fx:id="graphicCardMemoryColumn" text="Pamięć karty graficznej">
+            </TableColumn>
+            <TableColumn fx:id="osColumn" text="System operacyjny">
+            </TableColumn>
+            <TableColumn fx:id="discReaderColumn" text="Napęd optyczny">
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <HBox>
+        <Label fx:id="welcomeText" />
+        <Label fx:id="duplicatesNumberText" prefHeight="18.0" prefWidth="306.0" />
+        <Label fx:id="newRecordsNumberText" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="224.0" />
+    </HBox>
+    <HBox>
+        <VBox>
+            <Label>Producent:</Label>
+            <TextField fx:id="manufacturerInput" />
+        </VBox>
+        <VBox>
+            <Label>Wielkość matrycy:</Label>
+            <TextField fx:id="screenSizeInput" />
+        </VBox>
+        <VBox>
+            <Label>Rozdzielczość:</Label>
+            <TextField fx:id="screenResolutionInput" />
+        </VBox>
+        <VBox>
+            <Label>Typ matrycy:</Label>
+            <TextField fx:id="screenTypeInput" />
+        </VBox>
+        <VBox>
+            <Label>Dotykowy:</Label>
+            <TextField fx:id="touchScreenInput" />
+        </VBox>
+        <VBox>
+            <Label>Procesor:</Label>
+            <TextField fx:id="processorInput" />
+        </VBox>
+        <VBox>
+            <Label>Liczba rdzeni:</Label>
+            <TextField fx:id="physicalCoresInput" />
+        </VBox>
+        <VBox>
+            <Label>Taktowanie:</Label>
+            <TextField fx:id="clockSpeedInput" />
+        </VBox>
+        <VBox>
+            <Label>RAM:</Label>
+            <TextField fx:id="ramInput" />
+        </VBox>
+        <VBox>
+            <Label>Pojemność dysku:</Label>
+            <TextField fx:id="discStorageInput" />
+        </VBox>
+        <VBox>
+            <Label>Typ dysku:</Label>
+            <TextField fx:id="discTypeInput" />
+        </VBox>
+        <VBox>
+            <Label>Karta graficzna:</Label>
+            <TextField fx:id="graphicCardInput" />
+        </VBox>
+        <VBox>
+            <Label>Pamięć karty:</Label>
+            <TextField fx:id="graphicCardMemoryInput" />
+        </VBox>
+        <VBox>
+            <Label>System operacyjny:</Label>
+            <TextField fx:id="osInput" />
+        </VBox>
+        <VBox>
+            <Label>Napęd:</Label>
+            <TextField fx:id="discReaderInput" />
+        </VBox>
+    </HBox>
+
+    <Button onAction="#submit" text="Aktualizuj" />
+</VBox>

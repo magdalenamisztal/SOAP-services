@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://lab3.pl/soap-example"
+           targetNamespace="http://lab3.pl/soap-example"
+>
+
+    <xs:element name="getNumberByManufacturerRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="manufacturer" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getNumberByManufacturerResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="number" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getNumberByResolutionRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="manufacturer" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getNumberByResolutionResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="number" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+
+
+    <xs:element name="saveByQualitiesRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="param1" type="xs:string"/>
+                <xs:element name="value1" type="xs:string"/>
+                <xs:element name="param2" type="xs:string"/>
+                <xs:element name="value2" type="xs:string"/>
+                <xs:element name="param3" type="xs:string"/>
+                <xs:element name="value3" type="xs:string"/>
+                <xs:element name="param4" type="xs:string"/>
+                <xs:element name="value4" type="xs:string"/>
+                <xs:element name="param5" type="xs:string"/>
+                <xs:element name="value5" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="saveByQualitiesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="number" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+
+
+
+
+
+
+
+    <xs:element name="getLaptop">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="laptop" type="tns:laptop"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="laptop">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="manufacturer" type="xs:string"/>
+            <xs:element name="screenSize" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

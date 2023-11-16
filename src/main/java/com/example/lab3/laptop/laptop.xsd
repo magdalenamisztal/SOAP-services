@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://lab3.pl/soap-example"
+           targetNamespace="http://lab3.pl/soap-example"
+>
+
+    <xs:element name="getNumberByManufacturerRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="manufacturer" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getNumberByManufacturerResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="number" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="getNumberByResolutionRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="manufacturer" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getNumberByResolutionResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="number" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="getLaptop">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="laptop" type="tns:laptop"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="laptop">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="manufacturer" type="xs:string"/>
+            <xs:element name="screenSize" type="xs:string"/>
+            <xs:element name="screenResolution" type="xs:string"/>
+            <xs:element name="screenType" type="xs:string"/>
+            <xs:element name="touchScreen" type="xs:string"/>
+            <xs:element name="processor" type="xs:string"/>
+            <xs:element name="physicalCores" type="xs:string"/>
+            <xs:element name="clockSpeed" type="xs:string"/>
+            <xs:element name="ram" type="xs:string"/>
+            <xs:element name="discStorage" type="xs:string"/>
+            <xs:element name="discType" type="xs:string"/>
+            <xs:element name="graphicCard" type="xs:string"/>
+            <xs:element name="graphicCardMemory" type="xs:string"/>
+            <xs:element name="os" type="xs:string"/>
+            <xs:element name="discReader" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
